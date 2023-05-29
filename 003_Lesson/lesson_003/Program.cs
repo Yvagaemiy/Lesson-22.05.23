@@ -5,22 +5,20 @@
 // 5 -> 1, 4, 9, 16, 25.
 // 2 -> 1,4
 
-double NewChislo(double num)
+
+void Squares(int num)
 {
-    double i =1;
-    Console.Write($"{num} -> ");
+    int counte = 1;
+   //  Console.Write($"{num} -> ");
 
-   while( num <+i)
-   {
-      Console.Write($"{Math.Pow(i, 2)}, ");
-
-        i++;
-   }
-
+    while (num >= counte)
+    {
+        Console.Write($"{Math.Pow(counte, 3)}, ");//меняя цифру меняем квадрат числа, куб и тд 
+        counte++;
+    }
+    Console.WriteLine();
 }
- 
-Console.WriteLine(" введите число");
+Console.Write("введите число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+Squares(num);
 
-double num = Convert.ToInt32(Console.ReadLine());
-
-NewChislo(num);
