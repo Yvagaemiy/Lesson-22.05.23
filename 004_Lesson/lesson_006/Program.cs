@@ -3,22 +3,19 @@
 // произведение чисел от 1 до N.
 // 4 -> 24 
 // 5 -> 120
-
-int ProductNum(int num)
+int Fact(int num)
 {
-    int count=0;
-   if(num==1) 
-   {
-   return 1;
-   }
-   else 
-   {
-  count= num*ProductNum(num-1);
-   }
-   return count;
+    int resulte=1;
+    for(int i = 1;i<=num;i++)
+    {
+    resulte=resulte*i;
+    }
+    return resulte;
 }
 
 Console.WriteLine("ВВидите число");
 int num = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine($"произведение числа {num}! -> {ProductNum( num)}");
+System.Console.WriteLine($"произведение чисел от {num}! - > {Fact( num)}");
+
+
 
