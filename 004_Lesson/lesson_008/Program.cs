@@ -28,10 +28,10 @@ int[]MekArray(int size,int from,int to)
 
 void SumPosNeg(int[] arr)
 {
-    int pos;
-    int neg;
-     pos = 0;
-     neg = 0;
+    int pos = 0;
+    int neg = 0;
+   //   pos = 0;
+   //   neg = 0;
      for (int i = 0;i < arr.Length;i ++)
      {
     if(arr[i]>=0)
