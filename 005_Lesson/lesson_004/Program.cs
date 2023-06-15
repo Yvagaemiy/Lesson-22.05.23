@@ -24,22 +24,21 @@ for (int i = 0; i < size; i++)
     return size;
 }
 
-int UserNum(int[]array)
+string UserNum(int[]arr,int num )
 {
-    int num = numuser;
-    for (int i = 0; i < array.Length; i++)
+    // int num = Convert.ToInt32(Console.ReadLine());
+    for (int i = 0; i < arr.Length; i++)
     {
-        if(num==array[i])
-        return "Yes!";
+        if(num==arr[i])
         
+        return "Yes";
     }
-    return "No!";
+    return"No";
 }
    
 
 System.Console.Write("Введите длину массива: ");
 int numsize = Convert.ToInt32(Console.ReadLine());
-
 
 System.Console.Write("Введите начало массива: ");
 int start = Convert.ToInt32(Console.ReadLine());
@@ -49,14 +48,12 @@ int stop = Convert.ToInt32(Console.ReadLine());
 
 
 int[] mass = MekArray(numsize, start, stop);
-
 System.Console.WriteLine(mass);
 
 PrintArray(mass);
 System.Console.WriteLine();
 
+//  System.Console.WriteLine
+
 Console.Write("Введите число: ");
-int numuser = Convert.ToInt32(Console.ReadLine());
-
- System.Console.WriteLine(UserNum(mass));
-
+System.Console.WriteLine (UserNum(mass, int.Parse(Console.ReadLine()!) ));
