@@ -6,7 +6,7 @@
 
 int[]MekArray()
 {
-   int[]array=new int[6];
+   int[]array=new int[4];
    for (int i = 0; i <array.Length; i++)
    {
     array[i] = new Random().Next(-99,100);
@@ -27,7 +27,7 @@ int PrintArray(int[]arr)
 int SumNeg(int[]ar)
 {
    int resulte=0;
-  for (int i = 0; i <ar.Length; i=i+2)
+  for (int i = 1; i <ar.Length; i=i+2)
   {
     resulte= resulte+ar[i];
   }
