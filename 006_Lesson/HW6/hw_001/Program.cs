@@ -6,36 +6,23 @@
 
 
 
-
-
-int MekArray(int numuser)
+int MekArray(int num)
 {
-    int count=0;
-    int array =  numuser;
-
-    for (int i = 0; i < array; i++)
+    int count = 0;
+    
+    for (int i = 1; i <= num; i++)
     {
-            if(array <0 && array ==0)
-            count++;
+        Console.Write($"число {i}: ");
+        int numuser = Convert.ToInt32(Console.ReadLine());
+        if (numuser > 0) count++;
     }
-
-  return count;
+    return count;
 }
 
-
-
-
-
-
-System.Console.WriteLine("Введите число: ");
-int numuser = int.Parse(Console.ReadLine()!);
-
-
-System.Console.WriteLine(MekArray(numuser));
-
-
-
-
+Console.Write("Введите M чисел: ");
+int numuser= Convert.ToInt32(Console.ReadLine());
+int result =  MekArray(numuser);
+Console.WriteLine($"количество чисел больше 0: {result}");
 
 
 
