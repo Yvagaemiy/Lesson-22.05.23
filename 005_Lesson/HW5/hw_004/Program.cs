@@ -6,50 +6,56 @@
 // ервоначалального массива , возможно придется 
 // кое-что для этого дополнительно выполнить.
 
-int []MekArray()
+int []MekArray(int array)
 {
-   int[]array = new int [6];
-   for (int i = 0; i < array.Length; i++)
+   int[]arr = new int [array];
+   for (int i = 0; i < arr.Length; i++)
    {
-     array[i] = new Random().Next(-50,50);
+     arr[i] = new Random().Next(-10,10);
    }
-    return array;
+    return arr;
 }
 
-int PrintArray(int[]array)
+int PrintArray(int[]ar)
 {
-  int size = array.Length;
+  int size = ar.Length;
   for (int i = 0; i < size; i++)
   {
-    System.Console.Write($"{array[i]} ");
+    System.Console.Write($"{ar[i]} ");
   }
+
   return size;
 }
 
-void MaxIndex(int[]array)
+int MaxIndex(int[]arr)
 {
-   int max = array[0];
-   int max_Index = 0;
-   for (int i = 0; i < array.Length; i++)
-   {
-    if (max > array[i])
-   {
-     max = array[i];
-    System.Console.WriteLine();
-    System.Console.WriteLine($"Max = {max}");
-   }
-   if (max = array[i])
-   {
-    max_Index = i;
-    System.Console.WriteLine();
-    System.Console.WriteLine($"Max = {i}"); 
-   }
-   }
+   int max = 0; 
+   int index = 0;                        
+   for (int i = 0; i < arr.Length; i++)
+    {      
+        if (max < arr[i])
+        {
+           max=arr[i]; 
+             
+         
+         if(arr[index]==max)
+          
+            System.Console.WriteLine($"Max число массива: = {index}");
+       } 
+          
+    } 
+      return max;
+
+
 }
+System.Console.Write("Введите длину массива: ");
+int size = Convert.ToInt32(Console.ReadLine());
 
-
-int[]mass = MekArray();
+int[]mass = MekArray(size);
 
 PrintArray(mass);
+System.Console.WriteLine();
+System.Console.WriteLine($"Max число массива: = {MaxIndex(mass)}");
+// MaxIndex(mass);
 
-MaxIndex(mass);
+
