@@ -48,7 +48,7 @@ string Number(int[,]arr, int num)
        for (int j = 0; j < arr.GetLength(1); j++)
        {
          if (arr[i,j]==num)
-         return $"Искомое число: {num} позиция элемента: [{j+1},{i+1}]";//arr[{f}, {s}] = {arr[f - 1, s - 1]}
+         return $"Искомое число: {num} позиция элемента: [{j},{i}]";//arr[{f}, {s}] = {arr[f - 1, s - 1]}
        }
    }
    return $"Искомое число: {num} такого числа в массиве нет ";
