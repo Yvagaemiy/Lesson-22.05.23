@@ -1,0 +1,32 @@
+﻿// Задача 2: Задайте значения M и N. Напишите программу, которая 
+// рекурсивно выведет все натуральные числа в промежутке от M до N.
+// M = 1; N = 5 -> "1, 2, 3, 4, 5"
+// M = 4; N = 8 -> "4, 6, 7, 8" 
+
+int GetNUmer (int from , int to)
+{
+    int num = from;
+    while(num < to)
+    {
+     System.Console.Write($"{num}, ");
+     num++;
+    }
+    return num;
+}
+string NumRec(int from, int to)
+{
+      if(from==to) return $"{to} ";
+      return NumRec(from, to - 1)+($"{to}, ");
+}
+
+System.Console.Write("введите число M: ");
+int from = Convert.ToInt32(Console.ReadLine());
+
+System.Console.Write("введите число N: ");
+int to = Convert.ToInt32(Console.ReadLine());
+
+ System.Console.Write($"значение  числа в промежутке от {from} до {to}        : ");
+System.Console.WriteLine(GetNUmer (from , to));
+
+System.Console.Write($"рекурсия значение  числа в промежутке от {from} до {to}: ");
+System.Console.WriteLine(NumRec(from, to));
